@@ -11,8 +11,30 @@
   background-color: rgb(104, 180, 240);
   color: white;
 }
+.sidebar-heading {
+  display: inline-block;
+  font-size: 30px;
+}
+.header-icon {
+  width: 30px;
+  margin-left: 10px;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  padding-bottom: 15px;
+}
 a {
   color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sidebar-icon {
+  display: inline-block;
+  filter: invert(100%);
+  padding-right: 8px;
+  width: 20px;
 }
 
 /* Header */
