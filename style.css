@@ -171,8 +171,13 @@ input {
 .sidebar-right > h3 {
   margin: 0px;
 }
-.announcements-container > p {
-  margin: 20px;
+.annauncement-item {
+  padding: 20px;
+  border-bottom: 1px solid darkgray;
+}
+.annauncement-item > p {
+  margin: 0;
+  padding: 3px;
 }
 .trending-container {
   display: grid;
