@@ -4,15 +4,62 @@
   grid-template-rows: repeat(1, 1fr) repeat(1, 4fr);
 }
 
+/* Sidebar left */
 .sidebar-left {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  background-color: aqua;
+  background-color: rgb(104, 180, 240);
+  color: white;
 }
+a {
+  color: white;
+}
+
+/* Header */
 .header {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 2fr;
 }
+.header-top {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr;
+}
+.header-bottom {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.header-bottom-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.header-bottom-right > button {
+  height: 2rem;
+  width: 5rem;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center;
+  background-color: rgb(104, 180, 240);
+  color: white;
+  border: 0px;
+}
+input {
+  background-color: rgb(230, 230, 230);
+  grid-column: 2 / 7;
+  align-self: center;
+  height: 20px;
+}
+.header-top > p {
+  grid-column: 9 / 11;
+  align-self: center;
+}
+
+/* Main */
 main {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -24,11 +71,31 @@ main {
   grid-row: 1 / 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background-color: lightgray;
+  padding: 20px;
 }
+.card {
+  background-color: white;
+  border-radius: 10px;
+  border-right: 2px solid darkgray;
+  border-bottom: 2px solid darkgray;
+}
+
+/* Sidebar right */
 .sidebar-right {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  background-color: lightgray;
+  padding: 20px 40px 20px 20px;
+}
+.sidebar-right > div {
+  background-color: white;
+  border-radius: 10px;
+  border-right: 2px solid darkgray;
+  border-bottom: 2px solid darkgray;
 }
