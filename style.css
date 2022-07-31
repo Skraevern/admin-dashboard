@@ -8,7 +8,7 @@
 .sidebar-left {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  background-color: rgb(104, 180, 240);
+  background-color: rgba(50, 50, 255, 0.868);
   color: white;
 }
 .sidebar-heading {
@@ -103,7 +103,7 @@ input {
   border-radius: 10px;
   align-self: center;
   justify-self: center;
-  background-color: rgb(104, 180, 240);
+  background-color: rgba(50, 50, 255, 0.868);
   color: white;
   border: 0px;
 }
@@ -112,12 +112,21 @@ input {
 }
 
 /* Main */
-main {
+.card-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: lightgray;
+}
+.card-top > h3 {
+  margin: 20px auto 0px 25px;
+}
+.main-container {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: repeat(1, 2fr) repeat(1, 1fr);
 }
+
 .card-container {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
@@ -130,8 +139,23 @@ main {
 .card {
   background-color: white;
   border-radius: 10px;
-  border-right: 2px solid darkgray;
-  border-bottom: 2px solid darkgray;
+  border-right: 3px solid darkgray;
+  border-bottom: 3px solid darkgray;
+  border-left: 4px solid rgba(50, 50, 255, 0.868);
+  position: relative;
+}
+.card > h4,
+.card > p {
+  margin: 20px 20px 0px 20px;
+}
+.card-buttons-container {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.card-buttons-container > img {
+  padding-left: 20px;
 }
 
 /* Sidebar right */
@@ -140,26 +164,49 @@ main {
   grid-row: 1 / 3;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   background-color: lightgray;
   padding: 20px 40px 20px 20px;
 }
+.sidebar-right > h3 {
+  margin: 0px;
+}
+.announcements-container > p {
+  margin: 20px;
+}
+.trending-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.trending-avatar {
+  height: 40px;
+  justify-self: center;
+  align-self: center;
+}
+.comment-container {
+  padding: 10px;
+}
+.comment-container > p {
+  margin: 0px;
+  padding: 0px;
+}
 .sidebar-right > div {
   background-color: white;
   border-radius: 10px;
-  border-right: 2px solid darkgray;
-  border-bottom: 2px solid darkgray;
+  border-right: 3px solid darkgray;
+  border-bottom: 3px solid darkgray;
 }
 /* Functions */
 
 .header-bottom > img:hover,
 .header-bottom-right > button:hover,
-.header-icon:hover {
+.header-icon:hover,
+.card-buttons-container > img:hover {
   cursor: pointer;
 }
 .header-bottom > img:active,
 .header-icon:active,
-.header-bottom-right > button:active {
+.header-bottom-right > button:active,
+.card-buttons-container > img:active {
   margin-top: 3px;
 }
